@@ -1,6 +1,8 @@
 # Учебный проект «Барбершоп»
 
 * Студент: [Александр Ярёха](https://up.htmlacademy.ru/htmlcss/16/user/191322).
+* Наставник: [Алексей Жуваров](https://htmlacademy.ru/profile/id85076).
+
 
 ---
 
