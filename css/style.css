@@ -5,7 +5,7 @@ body {
   font-weight: bold;
   font-family: "PT Sans Narrow", Arial, sans-serif; /* Как узнать наверняка, какие шрифты наиболее подходящие для подмены в случае отсутствия */
 
-  text-transform: capitalize; /* Большие буквы везде */
+  text-transform: uppercase;; /* Большие буквы везде */
 }
 
 .index-content-title, .page-header {
