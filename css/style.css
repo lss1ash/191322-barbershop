@@ -1,21 +1,70 @@
+/*
+1) Контейнер убрал внутрь мэйн
+2) Пустое место в логотипе - непустое (тримминг его не обрезает, как утверждал лектор на 3 вебинаре, там тень прозрачная практически незаметная)
+3) Блоки <b> стянул из демки :) пусть остаются для "совместимости" с лектором, но смысл уловил - чем меньше плодить одинаковых стилей (для b, h2 еще чего-нибудь), тем лучше
+4) Почитал про @font-face тут https://webfont.ru/blog/about-font-face-part-two/
+5) Убрал опечатку ";"
+6) Как я понял, привязываться к размерам при выборе заголовков - не очень хорошая идея. Поэтому в разметке используем h2 на главной и h1 на страницах каталога и товара (по смыслу), а стилизуем уже как нужно по размерам.
+7) Тени не заметил, спасибо, исправил. Также уменьшил большую картинку товара (уж очень большая была)
+
+*/
+
+/* Нормальный */
+@font-face {
+    font-family: "PT Sans Narrow";
+    src: local("PT Sans Narrow"),
+         url("fonts/ptsansnarrow.woff") format("woff"),
+         url("fonts/PTN57F.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+/* Жирный */
+@font-face {
+    font-family: "PT Sans Narrow";
+    src: local("PT Sans Narrow Bold"),
+         url("fonts/ptsansnarrowbold.woff") format("woff"),
+         url("fonts/PTN77F.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
 body {
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
   font-size: 14px;
   line-height: 24px;
-  color: #000;
   font-weight: bold;
-  font-family: "PT Sans Narrow", Arial, sans-serif; /* Как узнать наверняка, какие шрифты наиболее подходящие для подмены в случае отсутствия */
+  font-style: normal;
+  color: #000;
+  text-transform: uppercase;
 
-  text-transform: uppercase;; /* Большие буквы везде */
+  background-color: #242424;
 }
 
-.index-content-title, .page-header {
+header a {
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFF;
+  text-decoration: none;
+}
+
+.index-content h2, .features-name, h1 {
   font-size: 30px;
   line-height: 42px;
-  /* Остальное наследуется от body */
 }
 
-.description > h2, .filters h2 {
+.features, footer, footer a {
+  color: #FFF;
+}
+
+.index-content time {
+  text-transform: lowercase;
+}
+
+.filters h2 {
   font-size: 24px;
   line-height: 30px;
-  /* Остальное наследуется от body */
+}
+
+.filters label {
+  line-height: 18px;
 }
